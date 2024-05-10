@@ -1,8 +1,16 @@
 import "./App.css";
+import { useState } from "react";
 import React from "react";
 import { Button } from "antd";
 
+
 function App() {
+
+
+  const [color, setcolor] = useState();
+
+  const divstyle = { backgroundColor: color };
+
   return (
     <div>
       <h1>Color Picker</h1>
@@ -24,8 +32,9 @@ function App() {
         <Button type="primary" onClick={() => setcolor("CornflowerBlue")}>
           CornflowerBlue
         </Button>
+   
+    
       </div>
-      <Practice />
     </div>
   );
 }
