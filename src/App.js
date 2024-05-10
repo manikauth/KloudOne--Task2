@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import React from "react";
+import { Button } from "antd";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div>
+      <h1>Color Picker</h1>
+
+      <div style={divstyle}>
+        <p>The Color is {color}</p>
+        <Button type="primary" onClick={() => setcolor("Aquamarine")}>
+          Aquamarine
+        </Button>
+        &ensp;
+        <Button type="primary" onClick={() => setcolor("BlueViolet")}>
+          BlueViolet
+        </Button>
+        &ensp;
+        <Button type="primary" onClick={() => setcolor("Chartreuse")}>
+          Chartreuse
+        </Button>
+        &ensp;
+        <Button type="primary" onClick={() => setcolor("CornflowerBlue")}>
+          CornflowerBlue
+        </Button>
+      </div>
+      <Practice />
     </div>
   );
 }
